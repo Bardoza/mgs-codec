@@ -1,0 +1,124 @@
+:root {
+  --main-bg-color: #000;
+  --dark: #101818;
+  --medium: #284038;
+  --light: #b0f8f0;
+  --screen-height: 300px;
+  --screen-width: 58px;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codec {
+  border: 3px solid var(--dark);
+  height: var(--screen-height);
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 25px;
+}
+
+.screen {
+  background: var(--medium);
+  height: 100%;
+  width: 173px;
+  border: none;
+}
+
+.frequency {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.ppt,
+.memory {
+  background: var(--dark);
+  display: inline-block;
+  align-self: center;
+  text-align: center;
+  width: 10rem;
+  font-weight: bold;
+  box-shadow: 0 0 0px 5px var(--main-bg-color);
+  position: absolute;
+  font-size: 2rem;
+}
+
+.memory {
+  bottom: 0;
+  color: var(--medium);
+  padding: 0 0.5rem;
+}
+
+.ppt {
+  color: var(--light);
+  letter-spacing: 0.5rem;
+  padding-left: 0.5rem;
+  line-height: 2.5rem;
+  z-index: 1;
+  margin-top: -0.2rem;
+  top: 0rem;
+}
+
+.display {
+  border-top: 3px solid var(--dark);
+  border-bottom: 3px solid var(--dark);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display:before,
+.display:after {
+  background-color: var(--dark);
+  color: var(--medium);
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.display:before {
+  content: "<";
+  left: 1rem;
+}
+
+.display:after {
+  content: ">";
+  right: 1rem;
+}
+
+.lcd {
+  background-color: var(--dark);
+  height: 10rem;
+  width: 17rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.4rem;
+}
+
+.bar {
+  height: 1rem;
+  width: 100%;
+  background-color: var(--medium);
+}
+
+.bar.active {
+  background-color: var(--light);
+}
